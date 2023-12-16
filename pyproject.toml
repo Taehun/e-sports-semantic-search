@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "e-sports-semantic-search"
+version = "0.1.0"
+description = "e스포츠 시맨틱 검색"
+authors = ["Taehun Kim <kth3321@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gradio = "^4.10.0"
+llama-index = "^0.9.15.post2"
+beautifulsoup4 = "^4.12.2"
+requests = "^2.31.0"
+sqlalchemy = "^2.0.23"
+pymongo = {extras = ["srv"], version = "^4.6.1"}
+openai = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
