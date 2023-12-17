@@ -6,6 +6,7 @@ sdk_version: 4.10.0
 ---
 # e스포츠 시맨틱 검색 앱
 ## 시스템 아키텍처
+![아미켁처](./architecture.png)
 
 ## 기술 스택
 - UI: [Gradio](https://www.gradio.app)
