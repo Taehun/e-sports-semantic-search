@@ -5,6 +5,8 @@ sdk: gradio
 sdk_version: 4.10.0
 ---
 # e스포츠 시맨틱 검색 앱
+[![Deploy on Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-md.svg)](https://huggingface.co/spaces/taehun-dev/e-sports-semantic-search)
+
 ## 시스템 아키텍처
 ![아미켁처](./architecture.png)
 
