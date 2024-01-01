@@ -27,7 +27,5 @@ class Match(Base):
     team1Score = Column(SmallInteger, nullable=False, default=0)
     team2Score = Column(SmallInteger, nullable=False, default=0)
     winnerId = Column(BigInteger, ForeignKey("team.id"), nullable=True)
-    createdAt = Column(
-        TIMESTAMP(timezone=True), nullable=False, server_default=func.now()
-    )
+    createdAt = Column(TIMESTAMP(timezone=True), nullable=False, server_default=func.now())
     updatedAt = Column(TIMESTAMP(timezone=True), default=None, onupdate=func.now())

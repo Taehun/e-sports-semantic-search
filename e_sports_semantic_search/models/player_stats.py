@@ -31,7 +31,5 @@ class PlayerStats(Base):
     damageDealt = Column(Integer, nullable=True)
     damageTaken = Column(Integer, nullable=True)
 
-    createdAt = Column(
-        TIMESTAMP(timezone=True), nullable=False, server_default=func.now()
-    )
+    createdAt = Column(TIMESTAMP(timezone=True), nullable=False, server_default=func.now())
     updatedAt = Column(TIMESTAMP(timezone=True), default=None, onupdate=func.now())
