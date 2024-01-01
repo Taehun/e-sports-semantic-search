@@ -16,7 +16,6 @@ sdk_version: 4.10.0
 - UI: [Gradio](https://www.gradio.app)
 - RAG: [LlamaIndex](https://www.llamaindex.ai)
 
-
 ## 시작하기
 
 ### 시스템 요구사항
@@ -45,6 +44,8 @@ poetry run python e_sports_semantic_search/main.py
 
 ### SQL DB
 
+> **TODO**: Github Action으로 자동화 할 것! -> `e_sports_semactic_search/models` 폴더 변경 감지
+
 `alembic`을 사용하여 DB 스키마 버전 관리를 합니다:
 
 #### SQL DB 스키마 업데이트
@@ -60,7 +61,7 @@ poetry run alembic revision --autogenerate -m "Update DB schema" --rev-id="0002"
 
 #### SQL DB 스키마 적용
 
-현재 alembic 버전에서 `alembic/versions` 폴더의 스키마 파일의 `upgrade()` 함수 로직대로 다운그레이드 됩니다.
+현재 alembic 버전에서 `alembic/versions` 폴더의 최신 스키마 파일의 `upgrade()` 함수가 적용 됩니다.
 
 ```shell
 poetry run alembic upgrade head
@@ -68,8 +69,20 @@ poetry run alembic upgrade head
 
 #### SQL DB 스키마 롤백
 
-현재 alembic 버전에서 `alembic/versions` 폴더의 스키마 파일의 `downgrade()` 함수 로직대로 다운그레이드 됩니다.
+현재 alembic 버전에서 `alembic/versions` 폴더의 최신 스키마 파일의 `downgrade()` 함수가 적용 됩니다.
 
 ```shell
 poetry run alembic upgrade head
+```
+
+## 기타
+
+### `requirements.txt` 파일 생성하기
+
+> **TODO**: Github Action으로 자동화 할 것!
+
+Hugging Face Space에 배포하려면 `requirements.txt` 파일이 필요합니다. 아래 커맨드로 업데이트 합니다:
+
+```shell
+poetry export --without-hashes --without-urls | awk '{ print $1 }' FS=';' > requirements.txt
 ```
