@@ -1,3 +1,5 @@
+from urllib.parse import quote
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import as_declarative, declared_attr
 from sqlalchemy.orm import sessionmaker
@@ -5,14 +7,14 @@ from sqlalchemy.orm import sessionmaker
 from .config import settings
 
 # PostgresQL 연결 정보
-DB_USER = settings.POSTGRES_USER
-DB_PASS = settings.POSTGRES_PASSWORD
-DB_HOST = settings.POSTGRES_HOST
-DB_PORT = settings.POSTGRES_PORT
-DB_NAME = settings.POSTGRES_DB
+DB_USER = settings.DB_USER
+DB_PASS = settings.DB_PASS
+DB_HOST = settings.DB_HOST
+DB_PORT = settings.DB_PORT
+DB_NAME = settings.DB_NAME
 
 # Database URL
-POSTGRES_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+POSTGRES_URL = f"postgresql://{DB_USER}:{quote(DB_PASS)}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
 # Create the SQLAlchemy engine
 engine = create_engine(POSTGRES_URL, echo=True)

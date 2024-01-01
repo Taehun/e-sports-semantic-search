@@ -18,6 +18,7 @@ alembic = "^1.13.1"
 pydantic = "^2.5.3"
 pydantic-settings = "^2.1.0"
 types-requests = "^2.31.0.20231231"
+psycopg2 = "^2.9.9"
 
 [tool.poetry.group.dev]
 optional = true
