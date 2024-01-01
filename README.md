@@ -6,6 +6,7 @@ sdk_version: 4.10.0
 ---
 
 [![Deploy on Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-md.svg)](https://huggingface.co/spaces/taehun-dev/e-sports-semantic-search)
+[![Lint Code Base](https://github.com/Taehun/e-sports-semantic-search/actions/workflows/super-linter.yml/badge.svg)](https://github.com/Taehun/e-sports-semantic-search/actions/workflows/super-linter.yml)
 
 ## 시스템 아키텍처
 
