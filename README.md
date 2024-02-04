@@ -73,7 +73,7 @@ poetry run alembic upgrade head
 현재 alembic 버전에서 `alembic/versions` 폴더의 최신 스키마 파일의 `downgrade()` 함수가 적용 됩니다.
 
 ```shell
-poetry run alembic upgrade head
+poetry run alembic downgrade -1
 ```
 
 ## 기타

@@ -21,7 +21,7 @@ class PlayerStats(Base):
         Enum("top", "jungle", "mid", "bot", "support", name="position_type"),
         nullable=False,
     )  # type: Column
-    champion = Column(Integer, ForeignKey("champion.id"), nullable=True)
+    champion = Column(Integer, ForeignKey("champion.key"), nullable=True)
     kills = Column(SmallInteger, nullable=False)
     deaths = Column(SmallInteger, nullable=False)
     assists = Column(SmallInteger, nullable=False)

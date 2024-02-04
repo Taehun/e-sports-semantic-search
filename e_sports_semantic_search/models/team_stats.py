@@ -21,16 +21,16 @@ class TeamStats(Base):
     teamId = Column(BigInteger, ForeignKey("team.id"), nullable=False)
 
     # Ban & Pick
-    ban1 = Column(Integer, ForeignKey("champion.id"), nullable=True)
-    ban2 = Column(Integer, ForeignKey("champion.id"), nullable=True)
-    ban3 = Column(Integer, ForeignKey("champion.id"), nullable=True)
-    ban4 = Column(Integer, ForeignKey("champion.id"), nullable=True)
-    ban5 = Column(Integer, ForeignKey("champion.id"), nullable=True)
-    pick1 = Column(Integer, ForeignKey("champion.id"), nullable=False)
-    pick2 = Column(Integer, ForeignKey("champion.id"), nullable=False)
-    pick3 = Column(Integer, ForeignKey("champion.id"), nullable=False)
-    pick4 = Column(Integer, ForeignKey("champion.id"), nullable=False)
-    pick5 = Column(Integer, ForeignKey("champion.id"), nullable=False)
+    ban1 = Column(Integer, ForeignKey("champion.key"), nullable=True)
+    ban2 = Column(Integer, ForeignKey("champion.key"), nullable=True)
+    ban3 = Column(Integer, ForeignKey("champion.key"), nullable=True)
+    ban4 = Column(Integer, ForeignKey("champion.key"), nullable=True)
+    ban5 = Column(Integer, ForeignKey("champion.key"), nullable=True)
+    pick1 = Column(Integer, ForeignKey("champion.key"), nullable=False)
+    pick2 = Column(Integer, ForeignKey("champion.key"), nullable=False)
+    pick3 = Column(Integer, ForeignKey("champion.key"), nullable=False)
+    pick4 = Column(Integer, ForeignKey("champion.key"), nullable=False)
+    pick5 = Column(Integer, ForeignKey("champion.key"), nullable=False)
 
     # Game Stats
     kills = Column(SmallInteger, nullable=False)

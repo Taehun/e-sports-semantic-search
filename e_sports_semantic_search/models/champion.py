@@ -7,8 +7,8 @@ from ..db import Base
 # https://darkintaqt.com/blog/champ-ids
 class Champion(Base):
     # pylint:disable=not-callable
-    id = Column(Integer, primary_key=True, index=True, nullable=False)
-    key = Column(String, nullable=False)
+    key = Column(Integer, primary_key=True, index=True, nullable=False)
+    id = Column(String, nullable=False)
     name = Column(String, nullable=False)
     image = Column(String, nullable=False)
 
