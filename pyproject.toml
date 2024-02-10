@@ -47,3 +47,6 @@ profile = "black"
 [tool.mypy]
 ignore_missing_imports = true
 exclude = [".venv"]
+
+[tool.ruff]
+line-length = 120
