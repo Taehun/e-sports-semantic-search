@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     DB_NAME: str = "postgres"
     DB_HOST: str = "ci_db"
     DB_PORT: int = 5432
+    X_API_KEY: str = "some_api_key"
 
     class Config:
         env_file = "./.env"
