@@ -11,8 +11,8 @@ class Player(Base):
     name = Column(String, nullable=False)
     teamId = Column(BigInteger, ForeignKey("team.id"), nullable=False)
     position = Column(
-        Enum("top", "jungle", "mid", "bot", "support", name="position_type"),
-        nullable=False,
+        Enum("top", "jungle", "mid", "bottom", "support", name="position_type"),
+        nullable=True,
     )  # type: Column
     image = Column(String, nullable=False)
     createdAt = Column(TIMESTAMP(timezone=True), nullable=False, server_default=func.now())
