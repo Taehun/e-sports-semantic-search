@@ -16,6 +16,8 @@ sdk_version: 4.10.0
 
 - UI: [Gradio](https://www.gradio.app)
 - RAG: [LlamaIndex](https://www.llamaindex.ai)
+- SQL DB: [Supabase](https://supabase.com)
+- Vector DB: [MongoDBAtlas](https://www.mongodb.com/atlas/database)
 
 ## 시작하기
 
